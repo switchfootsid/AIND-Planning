@@ -19,12 +19,12 @@ class FluentState():
 
 
 def conjunctive_sentence(pos_list, neg_list):
-    """ returns expr conjuntive sentence given positive and negative fluent lists
+    """
+    returns expr conjuntive sentence given positive and negative fluent lists
 
     :param pos_list: list of fluents
     :param neg_list: list of fluents
     :return: expr sentence of fluent conjunction
-        e.g. "At(C1, SFO) ∧ ~At(P1, SFO)"
     """
     clauses = []
     for f in pos_list:
@@ -34,7 +34,7 @@ def conjunctive_sentence(pos_list, neg_list):
     return associate('&', clauses)
 
 
-def encode_state(fs: FluentState, fluent_map: list) -> str:
+def encode_state(fs, fluent_map):
     """ encode fluents to a string of T/F using mapping
 
     :param fs: FluentState object
@@ -49,8 +49,7 @@ def encode_state(fs: FluentState, fluent_map: list) -> str:
             state_tf.append('F')
     return "".join(state_tf)
 
-
-def decode_state(state: str, fluent_map: list) -> FluentState:
+def decode_state(state, fluent_map):
     """ decode string of T/F as fluent per mapping
 
     :param state: str eg. "TFFTFT" string of mapped positive and negative fluents
