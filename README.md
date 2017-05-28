@@ -1,9 +1,11 @@
 
 # Implement a Planning Search
 
+## Note from me:
+Solution to the Udacity AIND project about cargo transportation using progression search (forward search) for planning.
+
 ## Synopsis
 
-This project includes skeletons for the classes and functions needed to solve deterministic logistics planning problems for an Air Cargo transport system using a planning search agent. 
 With progression search algorithms like those in the navigation problem from lecture, optimal plans for each 
 problem will be computed.  Unlike the navigation problem, there is no simple distance heuristic to aid the agent. 
 Instead, you will implement domain-independent heuristics.
@@ -12,13 +14,13 @@ Instead, you will implement domain-independent heuristics.
 - Part 1 - Planning problems:
 	- READ: applicable portions of the Russel/Norvig AIMA text
 	- GIVEN: problems defined in classical PDDL (Planning Domain Definition Language)
-	- TODO: Implement the Python methods and functions as marked in `my_air_cargo_problems.py`
-	- TODO: Experiment and document metrics
+	- **DONE:** Implement the Python methods and functions as marked in `my_air_cargo_problems.py`
+	- **DONE:** Experiment and document metrics
 - Part 2 - Domain-independent heuristics:
 	- READ: applicable portions of the Russel/Norvig AIMA text
 	- TODO: Implement relaxed problem heuristic in `my_air_cargo_problems.py`
-	- TODO: Implement Planning Graph and automatic heuristic in `my_planning_graph.py`
-	- TODO: Experiment and document metrics
+	- **DONE:** Implement Planning Graph and automatic heuristic in `my_planning_graph.py`
+	- **DONE**: Experiment and document metrics
 - Part 3 - Written Analysis
 
 ## Environment requirements
