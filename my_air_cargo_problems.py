@@ -63,14 +63,10 @@ class AirCargoProblem(Problem):
             for cargo in self.cargos:
                 for plane in self.planes:
                     for airport in self.airports:
-                        # In order to load the cargo, we need the cargo and the plane
-                        # to be at the the airport.
                         precond_pos = [expr("At({}, {})".format(cargo, airport)), expr(
                             "At({}, {})".format(plane, airport))]
                         precond_neg = []
-                        # After a load, the cargo is in the plane.
                         effect_add = [expr("In({}, {})".format(cargo, plane))]
-                        # After a load, the cargo is no longer "at" the airport.
                         effect_rem = [expr("At({}, {})".format(cargo, airport))]
                         loads.append(Action(expr("Load({}, {}, {})".format(cargo, plane, airport)),
                                             [precond_pos, precond_neg], [effect_add, effect_rem]))
